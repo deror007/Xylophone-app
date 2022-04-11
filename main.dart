@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audio_cache.dart';
 
 void main() => runApp(XylophoneApp());
-
+//Play sound function
+//Allow user to press an xylophone key to play sound.
 class XylophoneApp extends StatelessWidget {
   void playSound(int soundNumber) {
     final player = AudioCache();
     player.play('note$soundNumber.wav');
   }
-
   Expanded buildkey({int soundNum, Color colour}) {
     return Expanded(
       child: FlatButton(
@@ -18,7 +18,7 @@ class XylophoneApp extends StatelessWidget {
           color: colour),
     );
   }
-
+  //Scaffold of the xylophone UI
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
